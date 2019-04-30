@@ -63,6 +63,7 @@
 
 
 
+
 .grid_container2 {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -95,29 +96,29 @@
             grid-column-start: 1;
             grid-column-end: 2;
             background-color: cyan;
-            min-height: 65px;
-            min-width: 65px;
+            // min-height: 65px;
+            // min-width: 65px;
         }
         .csgo_logo {
             grid-column-start: 2;
             grid-column-end: 4;
             background-color: orange;
-            min-height: 65px;
-            min-width: 65px;
+            // min-height: 65px;
+            // min-width: 65px;
         }
         .search {
             grid-column-start: 6;
             grid-column-end: 9;
             background-color: white;
-            min-height: 65px;
-            min-width: 65px;
+            // min-height: 65px;
+            // min-width: 65px;
         }
         .online_online {
             grid-column-start: 9;
             grid-column-end: 11;
             background-color: orangered;
-            min-height: 65px;
-            min-width: 65px;
+            // min-height: 65px;
+            // min-width: 65px;
         }
         .account {
             grid-column-start: 11;
@@ -129,11 +130,13 @@
     .left_menu {
         grid-area: lft;
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(7, 60px);
+        grid-template-columns: 50px;
+        grid-template-rows: repeat(7, 50px);
         grid-gap: 10px;
         padding: 10px;
         background-color: burlywood;
+        font-size: 10px;
+        
 
         div {
             grid-auto-rows: 50px;
@@ -166,8 +169,8 @@
         padding: 10px;
 
         background-color: brown;
-        min-height: 65px;
-        min-width: 65px;
+        // min-height: 65px;
+        // min-width: 65px;
 
         div {
             grid-auto-rows: 1fr;
@@ -175,12 +178,181 @@
         }
 
     }
-    // p {
-    //     grid-area: test;
-    //     background-color: green;
-    //     display: subgrid;
-    //     grid-template-columns: repeat(2, 1fr);
-        // grid-template-rows: repeat(1, 1fr);
+}
 
-    // }
+
+
+
+
+
+@media screen and (max-width: 480px) {
+    .grid_container1 {
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(9, 50px);
+        grid-template-areas: 
+            'hdr hdr hdr hdr hdr hdr hdr hdr hdr hdr hdr hdr'
+            'lft lft lft lft lft lft lft lft lft lft lft lft'
+            'cntnt1 cntnt1 cntnt1 cntnt1 cntnt1 cntnt1 cntnt1 cntnt1 cntnt1 cntnt1 cntnt1 cntnt1'
+            'cntnt1 cntnt1 cntnt1 cntnt1 cntnt1 cntnt1 cntnt1 cntnt1 cntnt1 cntnt1 cntnt1 cntnt1'
+            'smll_cntnt1 smll_cntnt1 smll_cntnt1 smll_cntnt1 smll_cntnt1 smll_cntnt1 smll_cntnt1 smll_cntnt1 smll_cntnt1 smll_cntnt1 smll_cntnt1 smll_cntnt1'
+            'cntnt2 cntnt2 cntnt2 cntnt2 cntnt2 cntnt2 cntnt2 cntnt2 cntnt2 cntnt2 cntnt2 cntnt2'
+            'cntnt2 cntnt2 cntnt2 cntnt2 cntnt2 cntnt2 cntnt2 cntnt2 cntnt2 cntnt2 cntnt2 cntnt2'
+            'smll_cntnt2 smll_cntnt2 smll_cntnt2 smll_cntnt2 smll_cntnt2 smll_cntnt2 smll_cntnt2 smll_cntnt2 smll_cntnt2 smll_cntnt2 smll_cntnt2 smll_cntnt2'
+            'rght rght rght rght rght rght rght rght rght rght rght rght';
+        grid-gap: 5px;
+        padding: 10px;
+        background-color: #444;
+        font-size: 10px;
+
+    
+        .header {
+            grid-area: hdr;
+            background-color: yellow;
+            min-height: 40px;
+            min-width: 40px;
+    
+        }
+        .left_menu {
+            grid-area: lft;
+            background-color: burlywood;
+        }
+    
+        .big_block1 {
+            grid-area: cntnt1;
+            background-color: orange;
+        }
+        .big_block2 {
+            grid-area: cntnt2; 
+            background-color: orange;
+        }
+        .small_block1{
+            grid-area: smll_cntnt1;
+            background-color: orangered;
+        }
+        .small_block2{
+            grid-area: smll_cntnt2;
+            background-color: orangered;
+        }
+        .right_menu {
+            grid-area: rght;
+            background-color: brown;
+        }
+    }
+
+
+    
+    .grid_container2 {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(7, 1fr);
+        grid-template-areas: 
+            'hdr hdr hdr hdr hdr hdr hdr hdr hdr hdr hdr hdr'
+            'lft lft lft lft lft lft lft lft lft lft lft lft'
+            'cntnt1 cntnt1 cntnt1 cntnt1 cntnt1 cntnt1 cntnt1 cntnt1 cntnt1 smll_cntnt1 smll_cntnt1 smll_cntnt1'
+            'cntnt1 cntnt1 cntnt1 cntnt1 cntnt1 cntnt1 cntnt1 cntnt1 cntnt1 smll_cntnt1 smll_cntnt1 smll_cntnt1'
+            'cntnt2 cntnt2 cntnt2 cntnt2 cntnt2 cntnt2 cntnt2 cntnt2 cntnt2 smll_cntnt2 smll_cntnt2 smll_cntnt2'
+            'cntnt2 cntnt2 cntnt2 cntnt2 cntnt2 cntnt2 cntnt2 cntnt2 cntnt2 smll_cntnt2 smll_cntnt2 smll_cntnt2'
+            'rght rght rght rght rght rght rght rght rght rght rght rght';
+        grid-gap: 5px;
+        padding: 1px;
+        background-color: #444;
+        font-size: 10px;
+    
+        .header {
+            grid-area: hdr;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: 1fr;
+            grid-gap: 5px;
+            // padding: 10px;
+    
+            background-color: #888;
+            min-height: 40px;
+            min-width: 40px;
+    
+            .logo {
+                grid-column-start: 1;
+                grid-column-end: 2;
+                background-color: cyan;
+                // min-height: 65px;
+                // min-width: 65px;
+            }
+            .csgo_logo {
+                grid-column-start: 2;
+                grid-column-end: 4;
+                background-color: orange;
+                // min-height: 65px;
+                // min-width: 65px;
+            }
+            .search {
+                grid-column-start: 6;
+                grid-column-end: 9;
+                background-color: white;
+                // min-height: 65px;
+                // min-width: 65px;
+            }
+            .online_online {
+                grid-column-start: 9;
+                grid-column-end: 11;
+                background-color: orangered;
+                // min-height: 65px;
+                // min-width: 65px;
+            }
+            .account {
+                grid-column-start: 11;
+                grid-column-end: 13;
+                background-color: #999;
+            }
+    
+        }
+        .left_menu {
+            grid-area: lft;
+            display: grid;
+            grid-template-columns: repeat(7, 40px);
+            grid-template-rows: 1fr;
+            grid-gap: 10px;
+            padding: 10px;
+            background-color: burlywood;
+    
+            div {
+                grid-auto-columns: 30px;
+                background-color: firebrick;
+            }
+        }
+    
+        .big_block1 {
+            grid-area: cntnt1;
+            background-color: orange;
+        }
+        .big_block2 {
+            grid-area: cntnt2; 
+            background-color: orange;
+        }
+        .small_block1{
+            grid-area: smll_cntnt1;
+            background-color: orangered;
+        }
+        .small_block2{
+            grid-area: smll_cntnt2;
+            background-color: orangered;
+        }
+        .right_menu {
+            grid-area: rght;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: 1fr;
+            grid-gap: 10px;
+            padding: 10px;
+    
+            background-color: brown;
+            // min-height: 65px;
+            // min-width: 65px;
+    
+            div {
+                grid-auto-columns: 1fr;
+                background-color: coral;
+            }
+    
+        }
+    }
 }
